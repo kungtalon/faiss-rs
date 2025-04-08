@@ -194,7 +194,12 @@ impl<I> Index for PreTransformIndexImpl<I> {
             Ok(RangeSearchResult { inner: p_res })
         }
     }
-    fn search_with_filter(&mut self, q: &[f32], k: usize, sel: &IdSelector) -> Result<SearchResult> {
+    fn search_with_params(
+        &mut self,
+        q: &[f32],
+        k: usize,
+        sel: &IdSelector,
+    ) -> Result<SearchResult> {
         unsafe {
             let nq = q.len() / self.d() as usize;
             let mut distances = vec![0_f32; k * nq];

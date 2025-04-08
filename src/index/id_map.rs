@@ -285,7 +285,7 @@ impl<I> Index for IdMap<I> {
         }
     }
 
-    fn search_with_filter(
+    fn search_with_params(
         &mut self,
         q: &[f32],
         k: usize,

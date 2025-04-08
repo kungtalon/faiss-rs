@@ -143,7 +143,7 @@ macro_rules! impl_native_index {
                     Ok(crate::index::RangeSearchResult { inner: p_res })
                 }
             }
-            fn search_with_filter(
+            fn search_with_params(
                 &mut self,
                 q: &[f32],
                 k: usize,

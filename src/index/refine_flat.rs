@@ -187,7 +187,7 @@ impl<BI> Index for RefineFlatIndexImpl<BI> {
             Ok(RangeSearchResult { inner: p_res })
         }
     }
-    fn search_with_filter(
+    fn search_with_params(
         &mut self,
         q: &[f32],
         k: usize,
